@@ -1,0 +1,205 @@
+$spacer: 6px !default;
+$spacers: (
+  0,
+  4px, // round($spacer / 2),
+  $spacer,
+  $spacer * 2,
+  $spacer * 4,
+  $spacer * 6,
+  $spacer * 8
+) !default;
+
+// Aliases for easy use
+$spacer-1: nth($spacers, 2) !default; // 4px
+$spacer-2: nth($spacers, 3) !default; // 6px
+$spacer-3: nth($spacers, 4) !default; // 12px
+$spacer-4: nth($spacers, 5) !default; // 24px
+$spacer-5: nth($spacers, 6) !default; // 36px
+$spacer-6: nth($spacers, 7) !default; // 48px
+
+$container-width: 980px !default;
+$grid-gutter:     10px !default;
+
+// breakpoints
+$width-xs: 0;
+$width-sm: 544px;
+$width-md: 768px;
+$width-lg: 1004px;
+$width-xl: 1280px;
+
+// New responsive container-width
+$container-md: $width-md !default;
+$container-lg: $width-lg !default;
+$container-xl: $width-xl !default;
+
+// Breakpoints
+$breakpoints: (
+  // Small screen / phone
+  sm: $width-sm,
+  // Medium screen / tablet
+  md: $width-md,
+  // Large screen / desktop (980 + (12 * 2)) <= container + gutters
+  lg: $width-lg,
+  // Extra large screen / wide desktop
+  xl: $width-xl
+) !default;
+
+// Responsive media queries
+
+@mixin breakpoint($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Margin spacer utilities
+// stylelint-disable block-opening-brace-space-before, declaration-colon-space-before, primer/selector-no-utility, comment-empty-line-before
+@for $i from 1 through length($spacers) {
+  $size: #{nth($spacers, $i)};
+  $scale: #{$i - 1};
+
+  /* Set a #{$size} margin to all sides */
+  .m-#{$scale}  { margin       : #{$size} !important; }
+  /* Set a #{$size} margin on the top */
+  .mt-#{$scale} { margin-top   : #{$size} !important; }
+  /* Set a #{$size} margin on the right */
+  .mr-#{$scale} { margin-right : #{$size} !important; }
+  /* Set a #{$size} margin on the bottom */
+  .mb-#{$scale} { margin-bottom: #{$size} !important; }
+  /* Set a #{$size} margin on the left */
+  .ml-#{$scale} { margin-left  : #{$size} !important; }
+
+  /* Set a #{$size} margin on the left & right */
+  .mx-#{$scale} {
+    margin-right: #{$size} !important;
+    margin-left : #{$size} !important;
+  }
+
+  /* Set a #{$size} margin on the top & bottom */
+  .my-#{$scale} {
+    margin-top   : #{$size} !important;
+    margin-bottom: #{$size} !important;
+  }
+}
+
+// Loop through the breakpoint values
+@each $breakpoint in map-keys($breakpoints) {
+
+  // Loop through the spacer values
+  @for $i from 1 through length($spacers) {
+    @include breakpoint($breakpoint) {
+      $size: #{nth($spacers, $i)}; // sm, md, lg, xl
+      $scale: #{$i - 1};  // 0, 1, 2, 3, 4, 5, 6
+
+      /* Set a #{$size} margin to all sides at the breakpoint #{$breakpoint} */
+      .m-#{$breakpoint}-#{$scale}  { margin: #{$size} !important; }
+      /* Set a #{$size} margin on the top at the breakpoint #{$breakpoint} */
+      .mt-#{$breakpoint}-#{$scale} { margin-top: #{$size} !important; }
+      /* Set a #{$size} margin on the right at the breakpoint #{$breakpoint} */
+      .mr-#{$breakpoint}-#{$scale} { margin-right: #{$size} !important; }
+      /* Set a #{$size} margin on the bottom at the breakpoint #{$breakpoint} */
+      .mb-#{$breakpoint}-#{$scale} { margin-bottom: #{$size} !important; }
+      /* Set a #{$size} margin on the left at the breakpoint #{$breakpoint} */
+      .ml-#{$breakpoint}-#{$scale} { margin-left: #{$size} !important; }
+
+      /* Set a #{$size} margin on the left & right at the breakpoint #{$breakpoint} */
+      .mx-#{$breakpoint}-#{$scale} {
+        margin-right: #{$size} !important;
+        margin-left: #{$size} !important;
+      }
+
+      /* Set a #{$size} margin on the top & bottom at the breakpoint #{$breakpoint} */
+      .my-#{$breakpoint}-#{$scale} {
+        margin-top: #{$size} !important;
+        margin-bottom: #{$size} !important;
+      }
+    }
+  }
+}
+
+/* Set an auto margin on left & right */
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+// Padding spacer utilities
+// stylelint-disable block-opening-brace-space-before, declaration-colon-space-before
+// stylelint-disable comment-empty-line-before
+@for $i from 1 through length($spacers) {
+  $size: #{nth($spacers, $i)};
+  $scale: #{$i - 1};
+
+  /* Set a #{$size} padding to all sides */
+  .p-#{$scale}   { padding       : #{$size} !important; }
+  /* Set a #{$size} padding to the top */
+  .pt-#{$scale}  { padding-top   : #{$size} !important; }
+  /* Set a #{$size} padding to the right */
+  .pr-#{$scale}  { padding-right : #{$size} !important; }
+  /* Set a #{$size} padding to the bottom */
+  .pb-#{$scale}  { padding-bottom: #{$size} !important; }
+  /* Set a #{$size} padding to the left */
+  .pl-#{$scale}  { padding-left  : #{$size} !important; }
+
+  /* Set a #{$size} padding to the left & right */
+  .px-#{$scale} {
+    padding-right: #{$size} !important;
+    padding-left: #{$size} !important;
+  }
+
+  /* Set a #{$size} padding to the top & bottom */
+  .py-#{$scale} {
+    padding-top: #{$size} !important;
+    padding-bottom: #{$size} !important;
+  }
+}
+
+// Responsive padding spacer utilities
+
+// Loop through the breakpoint values
+@each $breakpoint in map-keys($breakpoints) {
+
+  // Loop through the spacer values
+  @for $i from 1 through length($spacers) {
+    @include breakpoint($breakpoint) {
+      $size: #{nth($spacers, $i)}; // xs, sm, md, lg, xl
+      $scale: #{$i - 1};  // 0, 1, 2, 3, 4, 5, 6
+
+      /* Set a #{$size} padding to all sides at the #{$breakpoint} breakpoint */
+      .p-#{$breakpoint}-#{$scale}  { padding: #{$size} !important; }
+      /* Set a #{$size} padding to the top at the #{$breakpoint} breakpoint */
+      .pt-#{$breakpoint}-#{$scale} { padding-top: #{$size} !important; }
+      /* Set a #{$size} padding to the right at the #{$breakpoint} breakpoint */
+      .pr-#{$breakpoint}-#{$scale} { padding-right: #{$size} !important; }
+      /* Set a #{$size} padding to the bottom at the #{$breakpoint} breakpoint */
+      .pb-#{$breakpoint}-#{$scale} { padding-bottom: #{$size} !important; }
+      /* Set a #{$size} padding to the left at the #{$breakpoint} breakpoint */
+      .pl-#{$breakpoint}-#{$scale} { padding-left: #{$size} !important; }
+
+      /* Set a #{$size} padding to the left & right at the #{$breakpoint} breakpoint */
+      .px-#{$breakpoint}-#{$scale} {
+        padding-right: #{$size} !important;
+        padding-left: #{$size} !important;
+      }
+
+      /* Set a #{$size} padding to the top & bottom at the #{$breakpoint} breakpoint */
+      .py-#{$breakpoint}-#{$scale} {
+        padding-top: #{$size} !important;
+        padding-bottom: #{$size} !important;
+      }
+    }
+  }
+}

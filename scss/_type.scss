@@ -1,0 +1,42 @@
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #176911;
+  @include breakpoint(md) { font-size: 48px; }
+  @include breakpoint(lg) { font-size: 54px; }
+}
+
+h2 {
+  font-size: 28px;
+  @include breakpoint(md) { font-size: 34px; }
+  @include breakpoint(lg) { font-size: 38px; }
+}
+
+h3 {
+  font-size: 18px;
+  @include breakpoint(md) { font-size: 20px; }
+  @include breakpoint(lg) { font-size: 22px; }
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+
+// Big opening paragraphs
+.lead {
+  -webkit-font-smoothing: antialiased;
+  font-size: 21px;
+  @include breakpoint(md) { font-size: 24px; }
+  @include breakpoint(lg) { font-size: 26px; }
+}
+
+// For small text
+
+.text-small {
+  font-size: 14px !important;
+}
