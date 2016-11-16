@@ -1,17 +1,24 @@
 (function() {
   const serviceCosts = {
-    hulu: 7.99,
+    // Television
     netflix: 9.99,
+    hulu: 7.99,
     amazon: 8.99,
-    spotify: 9.99,
     hbo: 14.99,
-    audible: 14.95,
-    kindle: 9.99,
-    nba: 16.99,
-    mlb: 9.16,
+
+    // Music
+    spotify: 9.99,
     apple_music: 9.99,
     google_music: 9.99,
-    pandora: 4.99
+    pandora: 4.99,
+
+    // Books
+    audible: 14.95,
+    kindle: 9.99,
+
+    // Sports
+    nba: 16.99,
+    mlb: 9.16,
   }
 
   const causes = {
