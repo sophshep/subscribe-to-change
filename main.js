@@ -1,5 +1,5 @@
 (function() {
-  const services = {
+  const serviceCosts = {
     hulu: 7.99,
     netflix: 9.99,
     amazon: 8.99,
@@ -111,6 +111,14 @@
   }
 
   function addServices() {
+    const container = document.getElementById('services-container')
+    const template = document.getElementById('service-template').innerHTML
+    let servicesHTML = ''
+    for (let service in serviceCosts) {
+      const cost = serviceCosts[service]
+      servicesHTML += Mustache.render(template, {service: service, cost: cost})
+    }
+    container.innerHTML = servicesHTML
   }
 
   addServices()

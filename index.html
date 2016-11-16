@@ -33,79 +33,7 @@
 
         <h3 class="mb-4 mb-md-6">Which of the following services do you currently subscribe to?</h3>
 
-        <form class="clearfix gut-md">
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="hulu">
-                <input type="checkbox" name="subscription" value="7.99" id="hulu">
-                <img src="img/logo-hulu.png" alt="hulu">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="netflix">
-                <input type="checkbox" name="subscription" value="9.99" id="netflix">
-                <img src="img/logo-netflix.png" alt="netflix">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="hbo">
-                <input type="checkbox" name="subscription" value="15" id="hbo">
-                <img src="img/logo-hbo.png" alt="hbo">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="amazon">
-                <input type="checkbox" name="subscription" value="8.25" id="amazon">
-                <img src="img/logo-amazon.png" alt="amazon">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="spotify">
-                <input type="checkbox" name="subscription" value="9.99" id="spotify">
-                <img src="img/logo-spotify.png" alt="spotify">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="audible">
-                <input type="checkbox" name="subscription" value="14.95" id="audible">
-                <img src="img/logo-audible.png" alt="audible">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="kindle">
-                <input type="checkbox" name="subscription" value="9.99" id="kindle">
-                <img src="img/logo-kindle.png" alt="kindle">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="nba">
-                <input type="checkbox" name="subscription" value="16.99" id="nba">
-                <img src="img/logo-nba.png" alt="nba">
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="mlb">
-                <input type="checkbox" name="subscription" value="9.16" id="mlb">
-                <img src="img/logo-mlb.png" alt="mlb">
-              </label>
-            </div>
-          </div>
+        <form class="clearfix gut-md" id="services-container">
         </form>
 
         <div class="divider my-4"></div>
@@ -272,6 +200,17 @@
       </div>
     </div>
 
+    <script type="x-tmpl-mustache" id="service-template">
+      <div class="float-left col-6 col-md-4 mb-4">
+        <div class="check">
+          <label for="{{ service }}">
+            <input type="checkbox" name="subscription" value="{{ cost }}" id="{{ service }}">
+            <img src="img/logo-{{ service }}.png" alt="{{ service }}">
+          </label>
+        </div>
+      </div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="main.js"></script>
   </body>
 
