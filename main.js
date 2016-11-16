@@ -20,6 +20,9 @@
     audible: 14.95,
     kindle: 9.99,
 
+    // Games
+    xbox: 4.99,
+
     // Sports
     nba: 16.99,
     mlb: 9.16,
