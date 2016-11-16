@@ -32,9 +32,19 @@
     document.getElementById('nonprofit-phrase').textContent = nonprofitPhrase
   }
 
+  function showAssociatedNonprofits() {
+    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
+    for (let i = 0; i < causeCheckboxes.length; i++) {
+      const cause = causeCheckboxes[i].value
+      const nonprofit = document.querySelector(`.nonprofit[data-cause="${cause}"]`)
+      nonprofit.style.display = 'block'
+    }
+  }
+
   function subscribeToChange(event) {
     showTotalExpenses()
     showNonprofitCount()
+    showAssociatedNonprofits()
     showResults()
   }
 
