@@ -1,6 +1,14 @@
 (function() {
+  function getSelectedServices() {
+    return document.querySelectorAll('input[name="subscription"]:checked')
+  }
+
+  function getSelectedCauses() {
+    return document.querySelectorAll('input[name="cause"]:checked')
+  }
+
   function calculateServiceTotal() {
-    const serviceCheckboxes = document.querySelectorAll('input[name="subscription"]:checked')
+    const serviceCheckboxes = getSelectedServices()
     let total = 0
     for (let i = 0; i < serviceCheckboxes.length; i++) {
       total = total + parseFloat(serviceCheckboxes[i].value)
@@ -9,7 +17,7 @@
   }
 
   function getNonprofitPhrase() {
-    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
+    const causeCheckboxes = getSelectedCauses()
     const nonprofitCount = causeCheckboxes.length
     if (nonprofitCount === 1) {
       return 'is 1 nonprofit that needs'
@@ -38,7 +46,7 @@
   }
 
   function showAssociatedNonprofits() {
-    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
+    const causeCheckboxes = getSelectedCauses()
     for (let i = 0; i < causeCheckboxes.length; i++) {
       const cause = causeCheckboxes[i].value
       const nonprofit = document.querySelector(`.nonprofit[data-cause="${cause}"]`)
@@ -74,8 +82,8 @@
   }
 
   function toggleButton() {
-    const serviceCheckboxes = document.querySelectorAll('input[name="subscription"]:checked')
-    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
+    const serviceCheckboxes = getSelectedServices()
+    const causeCheckboxes = getSelectedCauses()
     const button = document.getElementById('subscribe-to-change')
     button.disabled = causeCheckboxes.length < 1 || serviceCheckboxes.length < 1
   }
