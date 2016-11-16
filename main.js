@@ -14,6 +14,18 @@
     pandora: 4.99
   }
 
+  const causes = {
+    immigration: 'Immigration',
+    reproductive: 'Reproductive Health',
+    'civil-rights': 'Civil Rights',
+    'climate-change': 'Climate Change',
+    education: 'Education',
+    'trans-rights': 'Transgender Rights',
+    lgbtq: 'LGBTQ Youth',
+    criminal: 'Criminal Justice',
+    'police-violence': 'Police Violence'
+  }
+
   function getSelectedServices() {
     return document.querySelectorAll('input[name="subscription"]:checked')
   }
@@ -110,7 +122,7 @@
     }
   }
 
-  function addServices() {
+  function listServices() {
     const container = document.getElementById('services-container')
     const template = document.getElementById('service-template').innerHTML
     let servicesHTML = ''
@@ -121,7 +133,19 @@
     container.innerHTML = servicesHTML
   }
 
-  addServices()
+  function listCauses() {
+    const container = document.getElementById('causes-container')
+    const template = document.getElementById('cause-template').innerHTML
+    let causesHTML = ''
+    for (let key in causes) {
+      const name = causes[key]
+      causesHTML += Mustache.render(template, {key: key, name: name})
+    }
+    container.innerHTML = causesHTML
+  }
+
+  listServices()
+  listCauses()
   hookUpButtons()
   listenForCheckboxChanges()
 })()

@@ -33,87 +33,13 @@
 
         <h3 class="mb-4 mb-md-6">Which of the following services do you currently subscribe to?</h3>
 
-        <form class="clearfix gut-md" id="services-container">
-        </form>
+        <form class="clearfix gut-md" id="services-container"></form>
 
         <div class="divider my-4"></div>
 
         <h3 class="mb-4 mb-md-6">Which of the following causes would you like to support?</h3>
 
-        <form class="clearfix gut-md">
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="immigration">
-                <input type="checkbox" name="cause" value="immigration" id="immigration">
-                <span class="p-5">Immigration</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="reproductive">
-                <input type="checkbox" name="cause" value="reproductive" id="reproductive">
-                <span class="p-5">Reproductive Health</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="civil-rights">
-                <input type="checkbox" name="cause" value="civil-rights" id="civil-rights">
-                <span class="p-5">Civil Rights</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="climate-change">
-                <input type="checkbox" name="cause" value="climate-change" id="climate-change">
-                <span class="p-5">Climate Change</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="education">
-                <input type="checkbox" name="cause" value="education" id="education">
-                <span class="p-5">Education</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="trans-rights">
-                <input type="checkbox" name="cause" value="trans-rights" id="trans-rights">
-                <span class="p-5">Transgender Rights</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="lgbtq">
-                <input type="checkbox" name="cause" value="lgbtq" id="lgbtq">
-                <span class="p-5">LGBTQ Youth</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="criminal">
-                <input type="checkbox" name="cause" value="criminal" id="criminal">
-                <span class="p-5">Criminal Justice</span>
-              </label>
-            </div>
-          </div>
-          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-            <div class="check">
-              <label for="police-violence">
-                <input type="checkbox" name="cause" value="police-violence" id="police-violence">
-                <span class="p-5">Police Violence</span>
-              </label>
-            </div>
-          </div>
-        </form>
+        <form class="clearfix gut-md" id="causes-container"></form>
 
         <div class="divider my-4"></div>
 
@@ -210,6 +136,18 @@
         </div>
       </div>
     </script>
+
+    <script type="x-tmpl-mustache" id="cause-template">
+      <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+        <div class="check">
+          <label for="{{ key }}">
+            <input type="checkbox" name="cause" value="{{ key }}" id="{{ key }}">
+            <span class="p-5">{{ name }}</span>
+          </label>
+        </div>
+      </div>
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="main.js"></script>
   </body>
