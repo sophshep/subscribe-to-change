@@ -7,6 +7,7 @@
     hbo: 14.99,
     showtime: 10.99,
     sling: 20,
+    ps_vue: 29.99,
 
     // Music
     spotify: 9.99,
