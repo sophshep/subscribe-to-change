@@ -22,13 +22,19 @@
     document.getElementById('results').style.display = 'block'
   }
 
-  function subscribeToChange(event) {
+  function showTotalExpenses() {
     const serviceTotal = calculateServiceTotal().toFixed(2)
     document.getElementById('service-total').textContent = `$${serviceTotal}`
+  }
 
+  function showNonprofitCount() {
     const nonprofitPhrase = getNonprofitPhrase()
     document.getElementById('nonprofit-phrase').textContent = nonprofitPhrase
+  }
 
+  function subscribeToChange(event) {
+    showTotalExpenses()
+    showNonprofitCount()
     showResults()
   }
 
