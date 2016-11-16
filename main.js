@@ -5,6 +5,7 @@
     hulu: 7.99,
     amazon: 8.99,
     hbo: 14.99,
+    showtime: 10.99,
 
     // Music
     spotify: 9.99,
