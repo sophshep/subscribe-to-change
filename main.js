@@ -1,4 +1,19 @@
 (function() {
+  const services = {
+    hulu: 7.99,
+    netflix: 9.99,
+    amazon: 8.99,
+    spotify: 9.99,
+    hbo: 14.99,
+    audible: 14.95,
+    kindle: 9.99,
+    nba: 16.99,
+    mlb: 9.16,
+    apple_music: 9.99,
+    google_music: 9.99,
+    pandora: 4.99
+  }
+
   function getSelectedServices() {
     return document.querySelectorAll('input[name="subscription"]:checked')
   }
@@ -95,6 +110,10 @@
     }
   }
 
+  function addServices() {
+  }
+
+  addServices()
   hookUpButtons()
   listenForCheckboxChanges()
 })()
