@@ -30,7 +30,8 @@
     'trans-rights': 'Transgender Rights',
     lgbtq: 'LGBTQ Youth',
     criminal: 'Criminal Justice',
-    'police-violence': 'Police Violence'
+    'police-violence': 'Police Violence',
+    journalism: 'Nonpartisan Journalism',
   }
 
   const nonprofitsByCause = {
@@ -78,7 +79,12 @@
       name: 'Campaign Zero',
       description: 'Campaign Zero advocates for policy solutions to end police violence in America.',
       url: ''
-    }
+    },
+    journalism: {
+      name: 'insert nonpartisan journalism nonprofit here',
+      description: '',
+      url: ''
+    },
   }
 
   function getSelectedServices() {
