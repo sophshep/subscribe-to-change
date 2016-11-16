@@ -22,6 +22,11 @@
     document.getElementById('results').style.display = 'block'
   }
 
+  function showForm() {
+    document.getElementById('service-selection').style.display = 'block'
+    document.getElementById('results').style.display = 'none'
+  }
+
   function showTotalExpenses() {
     const serviceTotal = calculateServiceTotal().toFixed(2)
     document.getElementById('service-total').textContent = `$${serviceTotal}`
@@ -41,16 +46,31 @@
     }
   }
 
-  function subscribeToChange(event) {
+  function subscribeToChange() {
     showTotalExpenses()
     showNonprofitCount()
     showAssociatedNonprofits()
     showResults()
   }
 
-  function hookUpButton() {
-    const button = document.getElementById('subscribe-to-change')
-    button.addEventListener('click', subscribeToChange)
+  function hideNonprofits() {
+    const nonprofits = document.querySelectorAll('.nonprofit')
+    for (let i = 0; i < nonprofits.length; i++) {
+      nonprofits[i].style.display = 'none'
+    }
+  }
+
+  function reset() {
+    hideNonprofits()
+    showForm()
+  }
+
+  function hookUpButtons() {
+    const subscribeButton = document.getElementById('subscribe-to-change')
+    subscribeButton.addEventListener('click', subscribeToChange)
+
+    const resetButton = document.getElementById('reset')
+    resetButton.addEventListener('click', reset)
   }
 
   function toggleButton() {
@@ -67,6 +87,6 @@
     }
   }
 
-  hookUpButton()
+  hookUpButtons()
   listenForCheckboxChanges()
 })()
