@@ -56,3 +56,9 @@ p {
     color: darken(#25a0fb, 20%);
   }
 }
+
+button.cta {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

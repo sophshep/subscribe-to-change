@@ -2501,6 +2501,11 @@ p {
   .cta:hover {
     color: #036ab7; }
 
+button.cta {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+
 .calendar {
   max-width: 150px; }
 
