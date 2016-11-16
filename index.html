@@ -8,7 +8,7 @@
     <title>
       Subscribe to change
     </title>
-    <meta name="description" content="A description of my site.">
+    <meta name="description" content="Donate to nonprofits based on how much you spend on entertainment services each month.">
     <link rel="stylesheet" href="scss/main.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -16,183 +16,263 @@
 
   <body>
     <div class="container mx-auto">
-      <div class="clearfix">
-        <div class="float-right col-3">
-          <img src="img/calendar.svg" class="calendar ">
+      <div id="service-selection">
+        <div class="clearfix">
+          <div class="float-right col-3">
+            <img src="img/calendar.svg" class="calendar ">
+          </div>
+          <div class="float-right col-9 pr-6">
+            <h1 class="mb-3 mb-md-4">Subscribe to Change</h1>
+            <p class="mb-4">
+              Over 40 million Americans subscribe to Netflix, which means that almost $400 million dollars are taken out of our accounts annually. Many Americans don't even notice this. Imagine what could happen if we set up as many automatic contributions to help nonprofits do what they need to do.
+            </p>
+          </div>
         </div>
-        <div class="float-right col-9 pr-6">
-          <h1 class="mb-3 mb-md-4">Subscribe to Change</h1>
-          <p class="mb-4">
-            Work in progress: Over 40 million Americans subscribe to Netflix, which means that almost $400 million dollars are taken out of our accounts annually. Many americans don't even notice this. Imagine if we set up as many automatic contributions to help non-profits do what they need to do.
-          </p>
-        </div>
+
+        <div class="divider my-4"></div>
+
+        <h3 class="mb-4 mb-md-6">Which of the following services do you currently subscribe to?</h3>
+
+        <form class="clearfix gut-md">
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="hulu">
+                <input type="checkbox" name="subscription" value="7.99" id="hulu">
+                <img src="img/logo-hulu.png" alt="hulu">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="netflix">
+                <input type="checkbox" name="subscription" value="9.99" id="netflix">
+                <img src="img/logo-netflix.png" alt="netflix">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="hbo">
+                <input type="checkbox" name="subscription" value="15" id="hbo">
+                <img src="img/logo-hbo.png" alt="hbo">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="amazon">
+                <input type="checkbox" name="subscription" value="8.25" id="amazon">
+                <img src="img/logo-amazon.png" alt="amazon">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="spotify">
+                <input type="checkbox" name="subscription" value="9.99" id="spotify">
+                <img src="img/logo-spotify.png" alt="spotify">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="audible">
+                <input type="checkbox" name="subscription" value="14.95" id="audible">
+                <img src="img/logo-audible.png" alt="audible">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="kindle">
+                <input type="checkbox" name="subscription" value="9.99" id="kindle">
+                <img src="img/logo-kindle.png" alt="kindle">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="nba">
+                <input type="checkbox" name="subscription" value="16.99" id="nba">
+                <img src="img/logo-nba.png" alt="nba">
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="mlb">
+                <input type="checkbox" name="subscription" value="9.16" id="mlb">
+                <img src="img/logo-mlb.png" alt="mlb">
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div class="divider my-4"></div>
+
+        <h3 class="mb-4 mb-md-6">Which of the following causes would you like to support?</h3>
+
+        <form class="clearfix gut-md">
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="immigration">
+                <input type="checkbox" name="cause" value="immigration" id="immigration">
+                <span class="p-5">Immigration</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="reproductive">
+                <input type="checkbox" name="cause" value="reproductive" id="reproductive">
+                <span class="p-5">Reproductive Health</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="civil-rights">
+                <input type="checkbox" name="cause" value="civil-rights" id="civil-rights">
+                <span class="p-5">Civil Rights</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="climate-change">
+                <input type="checkbox" name="cause" value="climate-change" id="climate-change">
+                <span class="p-5">Climate Change</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="education">
+                <input type="checkbox" name="cause" value="education" id="education">
+                <span class="p-5">Education</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="trans-rights">
+                <input type="checkbox" name="cause" value="trans-rights" id="trans-rights">
+                <span class="p-5">Transgender Rights</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="lgbtq">
+                <input type="checkbox" name="cause" value="lgbtq" id="lgbtq">
+                <span class="p-5">LGBTQ Youth</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="criminal">
+                <input type="checkbox" name="cause" value="criminal" id="criminal">
+                <span class="p-5">Criminal Justice</span>
+              </label>
+            </div>
+          </div>
+          <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+            <div class="check">
+              <label for="police-violence">
+                <input type="checkbox" name="cause" value="police-violence" id="police-violence">
+                <span class="p-5">Police Violence</span>
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div class="divider my-4"></div>
+
+        <p class="mb-6">
+          <button type="button" class="cta" id="subscribe-to-change" disabled="disabled">
+            Subscribe to change &rarr;
+          </button>
+        </p>
       </div>
 
-      <div class="divider my-4"></div>
+      <div id="results" style="display: none">
+        <div class="text-center">
+          <h1 class="mb-3 mb-md-4">
+            <img src="img/calendar.svg" class="calendar-small mr-4">
+            Subscribe to Change
+          </h1>
+        </div>
 
-      <h3 class="mb-4 mb-md-6">Which of the following services do you currently subscribe to?</h3>
+        <div class="divider my-4"></div>
 
-      <form class="clearfix gut-md">
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="hulu">
-              <input type="checkbox" name="subscription" id="hulu">
-              <img src="img/logo-hulu.png" alt="hulu">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="netflix">
-              <input type="checkbox" name="subscription" id="netflix">
-              <img src="img/logo-netflix.png" alt="netflix">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="hbo">
-              <input type="checkbox" name="subscription" id="hbo">
-              <img src="img/logo-hbo.png" alt="hbo">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="amazon">
-              <input type="checkbox" name="subscription" id="amazon">
-              <img src="img/logo-amazon.png" alt="amazon">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="spotify">
-              <input type="checkbox" name="subscription" id="spotify">
-              <img src="img/logo-spotify.png" alt="spotify">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="audible">
-              <input type="checkbox" name="subscription" id="audible">
-              <img src="img/logo-audible.png" alt="audible">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="kindle">
-              <input type="checkbox" name="subscription" id="kindle">
-              <img src="img/logo-kindle.png" alt="kindle">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="nba">
-              <input type="checkbox" name="subscription" id="nba">
-              <img src="img/logo-nba.png" alt="nba">
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="mlb">
-              <input type="checkbox" name="subscription" id="mlb">
-              <img src="img/logo-mlb.png" alt="mlb">
-            </label>
-          </div>
-        </div>
-      </form>
+        <h2 class="mb-6">You spend <span class="number" id="service-total"></span> a month on entertainment.</h2>
 
-      <div class="divider my-4"></div>
+        <p class="mb-5">Here <span id="nonprofit-phrase"></span> your help:</p>
 
-      <h3 class="mb-4 mb-md-6">Which of the following causes would you like to support?</h3>
+        <div class="nonprofit" data-cause="police-violence">
+          <h3>Campaign Zero</h3>
+          <p>Campaign Zero advocates for policy solutions to end police violence in America.</p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
 
-      <form class="clearfix gut-md">
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="immigration">
-              <input type="checkbox" name="cause" id="immigration">
-              <span class="p-5">Immigration</span>
-            </label>
-          </div>
+        <div class="nonprofit" data-cause="civil-rights">
+          <h3>American Civil Liberties Union</h3>
+          <p>A nonpartisan, nonprofit organization whose stated mission is "to defend and preserve the individual rights and liberties guaranteed to every person in this country by the Constitution and laws of the United States.</p>
+          <a class="btn" href="">Donate Monthly</a>
         </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="reproductive">
-              <input type="checkbox" name="cause" id="reproductive">
-              <span class="p-5">Reproductive Health</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="civil-rights">
-              <input type="checkbox" name="cause" id="civil-rights">
-              <span class="p-5">Civil Rights</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="climate-change">
-              <input type="checkbox" name="cause" id="climate-change">
-              <span class="p-5">Climate Change</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="education">
-              <input type="checkbox" name="cause" id="education">
-              <span class="p-5">Education</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="trans-rights">
-              <input type="checkbox" name="cause" id="trans-rights">
-              <span class="p-5">Transgender Rights</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="lgbtq">
-              <input type="checkbox" name="cause" id="lgbtq">
-              <span class="p-5">LGBTQ Youth</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="criminal">
-              <input type="checkbox" name="cause" id="criminal">
-              <span class="p-5">Criminal Justice</span>
-            </label>
-          </div>
-        </div>
-        <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
-          <div class="check">
-            <label for="police-violence">
-              <input type="checkbox" name="cause" id="police-violence">
-              <span class="p-5">Police Violence</span>
-            </label>
-          </div>
-        </div>
-      </form>
 
-      <div class="divider my-4"></div>
+        <div class="nonprofit" data-cause="trans-rights">
+          <h3>Trans lifeline</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
 
-      <p class="">
-        <a href="results.html" class="cta mb-6">Subscribe to change ➝</a>
-      </p>
+        <div class="nonprofit" data-cause="criminal">
+          <h3>insert criminal justice nonprofit here</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <div class="nonprofit" data-cause="lgbtq">
+          <h3>insert LGBTQ nonprofit here</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <div class="nonprofit" data-cause="education">
+          <h3>insert education nonprofit here</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <div class="nonprofit" data-cause="climate-change">
+          <h3>Union of Concerned Scientists</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <div class="nonprofit" data-cause="reproductive">
+          <h3>Planned Parenthood</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <div class="nonprofit" data-cause="immigration">
+          <h3>insert immigration nonprofit here</h3>
+          <p></p>
+          <a class="btn" href="">Donate Monthly</a>
+        </div>
+
+        <p class="mb-6 mt-4">
+          <button type="button" class="cta" id="reset">
+            &larr; Go again
+          </button>
+        </p>
+      </div>
     </div>
 
+    <script src="main.js"></script>
   </body>
 
 </html>

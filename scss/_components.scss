@@ -48,7 +48,28 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
 }
 
 .nonprofit {
+  display: none;
   padding: $spacer-4 0;
   border-top: 1px solid rgba(0,0,0,0.1);
   border-bottom: 1px solid rgba(0,0,0,0.1);;
+}
+
+label {
+  cursor: pointer;
+}
+
+button.cta {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+    &:hover {
+      color: #25a0fb;
+    }
+  }
 }

@@ -2501,6 +2501,9 @@ p {
   .cta:hover {
     color: #036ab7; }
 
+button.cta {
+  font-family: 'Inconsolata', monospace; }
+
 .calendar {
   max-width: 150px; }
 
@@ -2542,8 +2545,24 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
   opacity: 1; }
 
 .nonprofit {
+  display: none;
   padding: 24px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+label {
+  cursor: pointer; }
+
+button.cta {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  button.cta:disabled {
+    cursor: default;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
+    button.cta:disabled:hover {
+      color: #25a0fb; }
 
 /*# sourceMappingURL=main.css.map */
