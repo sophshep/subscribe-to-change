@@ -2545,7 +2545,6 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
   opacity: 1; }
 
 .nonprofit {
-  display: none;
   padding: 24px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }

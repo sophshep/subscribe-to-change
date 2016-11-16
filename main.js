@@ -26,6 +26,54 @@
     'police-violence': 'Police Violence'
   }
 
+  const nonprofitsByCause = {
+    immigration: {
+      name: 'insert immigration nonprofit here',
+      description: '',
+      url: ''
+    },
+    reproductive: {
+      name: 'Planned Parenthood',
+      description: '',
+      url: ''
+    },
+    'civil-rights': {
+      name: 'American Civil Liberties Union',
+      description: 'A nonpartisan, nonprofit organization whose stated mission is "to defend and preserve the individual rights and liberties guaranteed to every person in this country by the Constitution and laws of the United States.',
+      url: ''
+    },
+    'climate-change': {
+      name: 'Union of Concerned Scientists',
+      description: '',
+      url: ''
+    },
+    education: {
+      name: 'insert education nonprofit here',
+      description: '',
+      url: ''
+    },
+    'trans-rights': {
+      name: 'Trans lifeline',
+      description: '',
+      url: ''
+    },
+    lgbtq: {
+      name: 'insert LGBTQ nonprofit here',
+      description: '',
+      url: ''
+    },
+    criminal: {
+      name: 'insert criminal justice nonprofit here',
+      description: '',
+      url: ''
+    },
+    'police-violence': {
+      name: 'Campaign Zero',
+      description: 'Campaign Zero advocates for policy solutions to end police violence in America.',
+      url: ''
+    }
+  }
+
   function getSelectedServices() {
     return document.querySelectorAll('input[name="subscription"]:checked')
   }
@@ -74,11 +122,15 @@
 
   function showAssociatedNonprofits() {
     const causeCheckboxes = getSelectedCauses()
+    const template = document.getElementById('nonprofit-template').innerHTML
+    Mustache.parse(template)
+    let nonprofitsHTML = ''
     for (let i = 0; i < causeCheckboxes.length; i++) {
       const cause = causeCheckboxes[i].value
-      const nonprofit = document.querySelector(`.nonprofit[data-cause="${cause}"]`)
-      nonprofit.style.display = 'block'
+      const nonprofit = nonprofitsByCause[cause]
+      nonprofitsHTML += Mustache.render(template, nonprofit)
     }
+    document.getElementById('nonprofits-container').innerHTML = nonprofitsHTML
   }
 
   function subscribeToChange() {
@@ -88,15 +140,12 @@
     showResults()
   }
 
-  function hideNonprofits() {
-    const nonprofits = document.querySelectorAll('.nonprofit')
-    for (let i = 0; i < nonprofits.length; i++) {
-      nonprofits[i].style.display = 'none'
-    }
+  function removeNonprofits() {
+    document.getElementById('nonprofits-container').innerHTML = ''
   }
 
   function reset() {
-    hideNonprofits()
+    removeNonprofits()
     showForm()
   }
 
@@ -125,6 +174,7 @@
   function listServices() {
     const container = document.getElementById('services-container')
     const template = document.getElementById('service-template').innerHTML
+    Mustache.parse(template)
     let servicesHTML = ''
     for (let service in serviceCosts) {
       const cost = serviceCosts[service]
@@ -136,6 +186,7 @@
   function listCauses() {
     const container = document.getElementById('causes-container')
     const template = document.getElementById('cause-template').innerHTML
+    Mustache.parse(template)
     let causesHTML = ''
     for (let key in causes) {
       const name = causes[key]
