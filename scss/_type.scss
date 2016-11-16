@@ -1,11 +1,8 @@
 h1 {
   font-size: 36px;
   font-family: 'Inconsolata', monospace;
-  text-transform: uppercase;
-  color: #989494;
-  letter-spacing: .1em;
-//  @include breakpoint(md) { font-size: 48px; }
-//  @include breakpoint(lg) { font-size: 54px; }
+  //@include breakpoint(md) { font-size: 48px; }
+  //@include breakpoint(lg) { font-size: 54px; }
 }
 
 h2 {
@@ -33,6 +30,7 @@ h5 {
 
 p {
   line-height: 1.5;
+  color: #989494;
 }
 
 // Big opening paragraphs
@@ -47,4 +45,14 @@ p {
 
 .text-small {
   font-size: 14px !important;
+}
+
+.cta {
+  font-size: 40px;
+  color: #25a0fb;
+  text-decoration: none;
+
+  &:hover {
+    color: darken(#25a0fb, 20%);
+  }
 }
