@@ -8,15 +8,29 @@
     return total
   }
 
-  function subscribeToChange(event) {
-    const serviceSelection = document.getElementById('service-selection')
-    serviceSelection.style.display = 'none'
+  function getNonprofitPhrase() {
+    const causeCheckboxes = document.querySelectorAll('inut[name="cause"]:checked')
+    console.log(causeCheckboxes)
+    const nonprofitCount = causeCheckboxes.length
+    if (nonprofitCount === 1) {
+      return 'is 1 nonprofit that needs'
+    }
+    return `are ${nonprofitCount} nonprofits that need`
+  }
 
+  function showResults() {
+    document.getElementById('service-selection').style.display = 'none'
+    document.getElementById('results').style.display = 'block'
+  }
+
+  function subscribeToChange(event) {
     const serviceTotal = calculateServiceTotal().toFixed(2)
     document.getElementById('service-total').textContent = `$${serviceTotal}`
 
-    const results = document.getElementById('results')
-    results.style.display = 'block'
+    const nonprofitPhrase = getNonprofitPhrase()
+    document.getElementById('nonprofit-phrase').textContent = nonprofitPhrase
+
+    showResults()
   }
 
   function hookUpButton() {
