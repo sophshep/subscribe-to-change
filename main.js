@@ -6,6 +6,7 @@
     amazon: 8.99,
     hbo: 14.99,
     showtime: 10.99,
+    sling: 20,
 
     // Music
     spotify: 9.99,
