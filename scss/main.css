@@ -2502,9 +2502,6 @@ p {
     color: #036ab7; }
 
 button.cta {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
   font-family: 'Inconsolata', monospace; }
 
 .calendar {
@@ -2554,5 +2551,17 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
 
 label {
   cursor: pointer; }
+
+button.cta {
+  border: none;
+  background-color: transparent;
+  cursor: pointer; }
+  button.cta:disabled {
+    cursor: default;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
+    button.cta:disabled:hover {
+      color: #25a0fb; }
 
 /*# sourceMappingURL=main.css.map */
