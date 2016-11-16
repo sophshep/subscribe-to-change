@@ -1,17 +1,32 @@
 (function() {
   const serviceCosts = {
-    hulu: 7.99,
+    // Television
     netflix: 9.99,
+    hulu: 7.99,
     amazon: 8.99,
-    spotify: 9.99,
     hbo: 14.99,
-    audible: 14.95,
-    kindle: 9.99,
-    nba: 16.99,
-    mlb: 9.16,
+    showtime: 10.99,
+    sling: 20,
+    ps_vue: 29.99,
+
+    // Music
+    spotify: 9.99,
     apple_music: 9.99,
     google_music: 9.99,
-    pandora: 4.99
+    pandora: 4.99,
+    soundcloud: 7,
+
+    // Books
+    audible: 14.95,
+    kindle: 9.99,
+
+    // Games
+    xbox: 4.99,
+    ps_plus: 4.99,
+
+    // Sports
+    nba: 16.99,
+    mlb: 9.16,
   }
 
   const causes = {
@@ -23,7 +38,8 @@
     'trans-rights': 'Transgender Rights',
     lgbtq: 'LGBTQ Youth',
     criminal: 'Criminal Justice',
-    'police-violence': 'Police Violence'
+    'police-violence': 'Police Violence',
+    journalism: 'Nonpartisan Journalism',
   }
 
   const nonprofitsByCause = {
@@ -71,7 +87,12 @@
       name: 'Campaign Zero',
       description: 'Campaign Zero advocates for policy solutions to end police violence in America.',
       url: ''
-    }
+    },
+    journalism: {
+      name: 'insert nonpartisan journalism nonprofit here',
+      description: '',
+      url: ''
+    },
   }
 
   function getSelectedServices() {
