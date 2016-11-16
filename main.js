@@ -9,8 +9,7 @@
   }
 
   function getNonprofitPhrase() {
-    const causeCheckboxes = document.querySelectorAll('inut[name="cause"]:checked')
-    console.log(causeCheckboxes)
+    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
     const nonprofitCount = causeCheckboxes.length
     if (nonprofitCount === 1) {
       return 'is 1 nonprofit that needs'
@@ -40,8 +39,7 @@
 
   function toggleButton() {
     const serviceCheckboxes = document.querySelectorAll('input[name="subscription"]:checked')
-    const causeCheckboxes = document.querySelectorAll('inut[name="cause"]:checked')
-    console.log('services checked:', serviceCheckboxes.length, '/ causes checked:', causeCheckboxes.length)
+    const causeCheckboxes = document.querySelectorAll('input[name="cause"]:checked')
     const button = document.getElementById('subscribe-to-change')
     button.disabled = causeCheckboxes.length < 1 || serviceCheckboxes.length < 1
   }
