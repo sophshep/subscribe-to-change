@@ -11,6 +11,7 @@
     apple_music: 9.99,
     google_music: 9.99,
     pandora: 4.99,
+    soundcloud: 7,
 
     // Books
     audible: 14.95,
