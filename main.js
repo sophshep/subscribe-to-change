@@ -22,6 +22,7 @@
 
     // Games
     xbox: 4.99,
+    ps_plus: 4.99,
 
     // Sports
     nba: 16.99,
