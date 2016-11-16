@@ -1,19 +1,23 @@
 h1 {
   font-size: 36px;
-  font-weight: 700;
-  color: #176911;
-  @include breakpoint(md) { font-size: 48px; }
-  @include breakpoint(lg) { font-size: 54px; }
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  color: #989494;
+  letter-spacing: .1em;
+//  @include breakpoint(md) { font-size: 48px; }
+//  @include breakpoint(lg) { font-size: 54px; }
 }
 
 h2 {
   font-size: 28px;
+  font-family: 'Inconsolata', monospace;
   @include breakpoint(md) { font-size: 34px; }
   @include breakpoint(lg) { font-size: 38px; }
 }
 
 h3 {
   font-size: 18px;
+  font-family: 'Inconsolata', monospace;
   @include breakpoint(md) { font-size: 20px; }
   @include breakpoint(lg) { font-size: 22px; }
 }
@@ -26,6 +30,10 @@ h5 {
   font-size: 14px;
 }
 
+
+p {
+  line-height: 1.5;
+}
 
 // Big opening paragraphs
 .lead {

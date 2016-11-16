@@ -1,3 +1,39 @@
+// Floats
+/* Float to the right */
+.float-right { float: right !important; }
+/* Float to the left */
+.float-left { float: left !important; }
+/* Don't float left or right */
+.float-none { float: none !important; }
+
+// Responsive float utlities
+// .float-md-left, .float-lg-right, ...
+@each $breakpoint in map-keys($breakpoints) {
+  @include breakpoint($breakpoint) {
+    /* Float to the left at the #{$breakpoint} breakpoint */
+    .float-#{$breakpoint}-left  { float: left !important; }
+    /* Float to the right at the #{$breakpoint} breakpoint */
+    .float-#{$breakpoint}-right  { float: right !important; }
+    /* No float at the #{$breakpoint} breakpoint */
+    .float-#{$breakpoint}-none { float: none !important; }
+  }
+}
+
+.clearfix {
+  &::before {
+    display: table;
+    content: "";
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+.overflow-hidden { overflow: hidden !important; }
+
 // GRID
 
 // Columns
@@ -47,6 +83,6 @@
 .gut-lg { @include gutters($spacer-4); }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   padding: $spacer-4;
 }

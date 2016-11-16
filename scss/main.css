@@ -48,10 +48,20 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+img {
+  max-width: 100%; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Inconsolata', monospace;
   background: #f4eeee;
-  color: #062034; }
+  color: #3f3d3d; }
 
 /* Set a 0 margin to all sides */
 .m-0 {
@@ -2158,6 +2168,77 @@ body {
   .py-xl-6 {
     padding-top: 48px !important;
     padding-bottom: 48px !important; } }
+/* Float to the right */
+.float-right {
+  float: right !important; }
+
+/* Float to the left */
+.float-left {
+  float: left !important; }
+
+/* Don't float left or right */
+.float-none {
+  float: none !important; }
+
+@media (min-width: 544px) {
+  /* Float to the left at the sm breakpoint */
+  .float-sm-left {
+    float: left !important; }
+
+  /* Float to the right at the sm breakpoint */
+  .float-sm-right {
+    float: right !important; }
+
+  /* No float at the sm breakpoint */
+  .float-sm-none {
+    float: none !important; } }
+@media (min-width: 768px) {
+  /* Float to the left at the md breakpoint */
+  .float-md-left {
+    float: left !important; }
+
+  /* Float to the right at the md breakpoint */
+  .float-md-right {
+    float: right !important; }
+
+  /* No float at the md breakpoint */
+  .float-md-none {
+    float: none !important; } }
+@media (min-width: 1004px) {
+  /* Float to the left at the lg breakpoint */
+  .float-lg-left {
+    float: left !important; }
+
+  /* Float to the right at the lg breakpoint */
+  .float-lg-right {
+    float: right !important; }
+
+  /* No float at the lg breakpoint */
+  .float-lg-none {
+    float: none !important; } }
+@media (min-width: 1280px) {
+  /* Float to the left at the xl breakpoint */
+  .float-xl-left {
+    float: left !important; }
+
+  /* Float to the right at the xl breakpoint */
+  .float-xl-right {
+    float: right !important; }
+
+  /* No float at the xl breakpoint */
+  .float-xl-none {
+    float: none !important; } }
+.clearfix::before {
+  display: table;
+  content: ""; }
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.overflow-hidden {
+  overflow: hidden !important; }
+
 .col-1 {
   width: 8.33333%; }
 
@@ -2360,22 +2441,19 @@ body {
     padding-left: 24px !important; }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   padding: 24px; }
 
 h1 {
   font-size: 36px;
-  font-weight: 700;
-  color: #176911; }
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 48px; } }
-  @media (min-width: 1004px) {
-    h1 {
-      font-size: 54px; } }
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  color: #989494;
+  letter-spacing: .1em; }
 
 h2 {
-  font-size: 28px; }
+  font-size: 28px;
+  font-family: 'Inconsolata', monospace; }
   @media (min-width: 768px) {
     h2 {
       font-size: 34px; } }
@@ -2384,7 +2462,8 @@ h2 {
       font-size: 38px; } }
 
 h3 {
-  font-size: 18px; }
+  font-size: 18px;
+  font-family: 'Inconsolata', monospace; }
   @media (min-width: 768px) {
     h3 {
       font-size: 20px; } }
@@ -2397,6 +2476,9 @@ h4 {
 
 h5 {
   font-size: 14px; }
+
+p {
+  line-height: 1.5; }
 
 .lead {
   -webkit-font-smoothing: antialiased;
@@ -2411,13 +2493,39 @@ h5 {
 .text-small {
   font-size: 14px !important; }
 
-.check label img {
-  border: 3px solid #f5cbc6;
-  max-width: 200px;
-  display: block; }
-.check input[type=checkbox] {
+.calendar {
+  max-width: 150px; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1); }
+
+.check {
+  background: #fff; }
+  .check img {
+    padding: 30px; }
+
+input[type=checkbox] {
   display: none; }
-  .check input[type=checkbox]:checked + img {
-    border: 3px solid #c4a29e; }
+
+input[type=checkbox] + img, input[type=checkbox] + span {
+  display: block;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  border: 5px solid #f5cbc6;
+  opacity: .7;
+  transition: all 0.2s ease-in; }
+
+input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
+  -webkit-filter: grayscale(0%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  border: 5px solid #c4a29e;
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.15);
+  opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */
