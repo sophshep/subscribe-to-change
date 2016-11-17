@@ -15,33 +15,28 @@
   </head>
 
   <body>
+    <div class="header">
+      <div class="container mx-auto">
+        <!--<div class="col-9">
+          <p class="mb-4">
+            Over 40 million Americans subscribe to Netflix, which means that almost $400 million dollars are taken out of our accounts annually. Many Americans don't even notice this. Imagine what could happen if we set up as many automatic contributions to help nonprofits do what they need to do.
+          </p>
+        </div>-->
+      </div>
+    </div>
     <div class="container mx-auto">
       <div id="service-selection">
-        <div class="clearfix">
-          <!--<div class="float-right col-3">
-            <img src="img/calendar.svg" class="calendar ">
-          </div>-->
-          <div class="float-right col-9 pr-6">
-            <h1 class="mb-3 mb-md-4">Subscribe to Change</h1>
-            <p class="mb-4">
-              Over 40 million Americans subscribe to Netflix, which means that almost $400 million dollars are taken out of our accounts annually. Many Americans don't even notice this. Imagine what could happen if we set up as many automatic contributions to help nonprofits do what they need to do.
-            </p>
-          </div>
-        </div>
-
-        <div class="divider my-4"></div>
-
-        <h3 class="mb-4 mb-md-6">Which of the following services do you currently subscribe to?</h3>
+        <h3 class="my-4 my-md-6 text-center">Which entertainment services do you pay for monthly?</h3>
         <form class="clearfix gut-md" id="services-container"></form>
 
+        <h3 class="my-4 my-md-6 text-center">
+          Which causes would you like to support?
+        </h3>
+        <form class="clearfix gut-md flex-container flex-stretch" id="causes-container"></form>
+
         <div class="divider my-4"></div>
 
-        <h3 class="mb-4 mb-md-6">Which of the following causes would you like to support?</h3>
-        <form class="clearfix gut-md" id="causes-container"></form>
-
-        <div class="divider my-4"></div>
-
-        <p class="mb-6">
+        <p class="mb-6 text-center">
           <button type="button" class="cta" id="subscribe-to-change" disabled="disabled">
             Subscribe to change &rarr;
           </button>
@@ -51,17 +46,17 @@
       <div id="results" style="display: none">
         <div class="text-center">
           <p class="mt-6 mb-3 text-large">Every month, you spend</p>
-          <span class="number" id="service-total"></span>
+          <span class="number d-block" id="service-total"></span>
           <p class="mb-6 text-large"> on entertainment.</p>
         </div>
-        <p class="mb-5">
-          Here <span id="nonprofit-phrase"></span> your help:
+        <p class="mb-5 text-center">
+          <em>Here <span id="nonprofit-phrase"></span> your help:</em>
         </p>
         <div id="nonprofits-container"></div>
 
-        <p class="mb-6 mt-4">
+        <p class="mb-6 mt-6 text-center">
           <button type="button" class="cta" id="reset">
-            &larr; Go again
+            &larr; Go back
           </button>
         </p>
       </div>
@@ -79,21 +74,25 @@
     </script>
 
     <script type="x-tmpl-mustache" id="cause-template">
-      <div class="float-left col-12 col-sm-6 col-md-4 mb-4">
+      <div class="flex-item col-12 col-sm-6 col-md-4 mb-4">
         <div class="check">
           <label for="{{ key }}">
             <input type="checkbox" name="cause" value="{{ key }}" id="{{ key }}">
-            <span class="p-5">{{ name }}</span>
+            <span class="cause-name p-5">{{ name }}</span>
           </label>
         </div>
       </div>
     </script>
 
     <script type="x-tmpl-mustache" id="nonprofit-template">
-      <div class="nonprofit" data-cause="{{ cause }}">
-        <h3>{{ name }}</h3>
-        <p>{{ description }}</p>
-        <a class="btn" href="{{ url }}">Donate Monthly</a>
+      <div class="nonprofit flex-container flex-center" data-cause="{{ cause }}">
+        <div class="flex-item col-md-9">
+          <h3 class="mb-3">{{ name }}</h3>
+          <p>{{ description }}</p>
+        </div>
+        <div class="flex-item col-md-3 text-right">
+          <a class="btn d-inline-block mt-4 mt-md-0" href="{{ url }}">Donate Monthly</a>
+        </div>
       </div>
     </script>
 

@@ -14,6 +14,8 @@
 
 .check {
   background: #fff;
+  border: 5px solid #ede7e7;
+  height: 100%;
 
   img {
     padding: 10px;
@@ -33,9 +35,12 @@ input[type=checkbox] + img, input[type=checkbox] + span {
   display: block;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
-  border: 5px solid #f5cbc6;
   opacity: .5;
   transition: all 0.2s ease-in;
+}
+
+input[type=checkbox] + span {
+  height: 100%;
 }
 
 input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
@@ -49,8 +54,10 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
 
 .nonprofit {
   padding: $spacer-4 0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(0,0,0,0.1);;
+  border-top: 2px solid rgba(0,0,0,0.1);
+  &:last-of-type {
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+  }
 }
 
 label {
@@ -58,17 +65,32 @@ label {
 }
 
 button.cta {
-  border: none;
   background-color: transparent;
   cursor: pointer;
+  color: #2717d3;
+  text-decoration: none;
+  border: 2px solid rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: 'Inconsolata', monospace;
+
+  &:hover {
+    color: darken(#25a0fb, 20%);
+    cursor: pointer;
+    border: 2px solid rgba(0,0,0,0.2);
+  }
 
   &:disabled {
-    cursor: default;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+    color: #bdb8b8;
 
     &:hover {
-      color: #25a0fb;
+      cursor: default;
+      color: #bdb8b8;
+      border: 2px solid rgba(0,0,0,0.1);
     }
   }
+}
+
+.header {
+  background: #2717d3;
 }
