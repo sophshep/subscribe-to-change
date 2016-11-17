@@ -1,6 +1,5 @@
 h1 {
   font-size: 36px;
-  font-family: 'Inconsolata', monospace;
   //@include breakpoint(md) { font-size: 48px; }
   //@include breakpoint(lg) { font-size: 54px; }
 }
@@ -15,8 +14,8 @@ h2 {
 h3 {
   font-size: 18px;
   font-family: 'Inconsolata', monospace;
-  @include breakpoint(md) { font-size: 20px; }
-  @include breakpoint(lg) { font-size: 22px; }
+  @include breakpoint(md) { font-size: 22px; }
+  @include breakpoint(lg) { font-size: 26px; }
 }
 
 h4 {
@@ -47,16 +46,39 @@ p {
   font-size: 14px !important;
 }
 
-.cta {
-  font-size: 40px;
-  color: #25a0fb;
-  text-decoration: none;
+.cause-name {
+  font-size: 20px;
+  color: #2717d3;
+}
 
-  &:hover {
-    color: darken(#25a0fb, 20%);
+.number {
+  font-family: 'Knewave', cursive;
+  font-size: 60px;
+  letter-spacing: .1em;
+  margin-bottom: 20px;
+  @include breakpoint(md) {
+    font-size: 100px;
+  }
+  @include breakpoint(lg) {
+    font-size: 150px;
   }
 }
 
-button.cta {
-  font-family: 'Inconsolata', monospace;
+.text-large {
+  font-size: 24px;
+  color: #3f3d3d;
+  @include breakpoint(md) {
+    font-size: 30px;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  color: #fff;
+  background: #2717d3;
+  text-decoration: none;
+
+  &:hover {
+    background: darken(#2717d3, 20%);
+  }
 }
