@@ -34,7 +34,6 @@
     reproductive: 'Reproductive Health',
     'civil-rights': 'Civil Rights',
     'climate-change': 'Climate Change',
-    education: 'Education',
     'trans-rights': 'Transgender Rights',
     lgbtq: 'LGBTQ Youth',
     criminal: 'Criminal Justice',
@@ -44,54 +43,49 @@
 
   const nonprofitsByCause = {
     immigration: {
-      name: 'insert immigration nonprofit here',
-      description: '',
-      url: ''
+      name: 'National Immigration Law Center',
+      description: 'The National Immigration Law Center (NILC) is dedicated to defending and advancing the rights of low-income immigrants.',
+      url: 'https://nilc.z2systems.com/np/clients/nilc/donation.jsp?campaign=15&'
     },
     reproductive: {
       name: 'Planned Parenthood',
-      description: '',
-      url: ''
+      description: 'Planned Parenthood delivers vital reproductive health care, sex education, and information to millions of women, men, and young people worldwide.',
+      url: 'https://secure.ppaction.org/site/Donation2?df_id=12913&12913.donation=form1&_ga=1.38484843.997121566.1477408976'
     },
     'civil-rights': {
       name: 'American Civil Liberties Union',
       description: 'A nonpartisan, nonprofit organization whose stated mission is "to defend and preserve the individual rights and liberties guaranteed to every person in this country by the Constitution and laws of the United States.',
-      url: ''
+      url: 'https://action.aclu.org/donate-aclu?redirect=donate/join-renew-give#donation-tabs-3'
     },
     'climate-change': {
-      name: 'Union of Concerned Scientists',
-      description: '',
-      url: ''
-    },
-    education: {
-      name: 'insert education nonprofit here',
-      description: '',
-      url: ''
+      name: 'NextGen Climate Action Committee',
+      description: 'NextGen Climate acts politically to prevent climate disaster and promote prosperity for every American.',
+      url: 'https://nextgenclimate.org/donate/contribute-to-nextgen-climate-action/'
     },
     'trans-rights': {
-      name: 'Trans lifeline',
-      description: '',
-      url: ''
+      name: 'Transgender Law Center',
+      description: 'Transgender Law Center works to change law, policy, and attitudes so that all people can live safely, authentically, and free from discrimination regardless of their gender identity or expression.',
+      url: 'http://transgenderlawcenter.org/donate'
     },
     lgbtq: {
-      name: 'insert LGBTQ nonprofit here',
-      description: '',
-      url: ''
+      name: 'LYRIC',
+      description: 'LYRIC’s mission is to build community and inspire positive social change through education enhancement, career trainings, health promotion, and leadership development with LGBTQQ youth, their families, and allies of all races, classes, genders, and abilities.',
+      url: 'https://donatenow.networkforgood.org/LYRIC'
     },
     criminal: {
-      name: 'insert criminal justice nonprofit here',
-      description: '',
-      url: ''
+      name: 'The Sentencing Project',
+      description: 'The Sentencing Project works for a fair and effective U.S. criminal justice system by promoting reforms in sentencing policy, addressing unjust racial disparities and practices, and advocating for alternatives to incarceration.',
+      url: 'http://www.sentencingproject.org/donate/'
     },
     'police-violence': {
       name: 'Campaign Zero',
       description: 'Campaign Zero advocates for policy solutions to end police violence in America.',
-      url: ''
+      url: 'https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=UVPa1waSv96uMA1rTlutiIIBOMjUqBSNf4OGcU5rPoApsQ-HIYsKNLbuUGC&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542'
     },
     journalism: {
-      name: 'insert nonpartisan journalism nonprofit here',
-      description: '',
-      url: ''
+      name: 'ProPublica',
+      description: 'ProPublica is an independent, non-profit newsroom that produces investigative journalism in the public interest. ',
+      url: 'https://www.propublica.org/donate/'
     },
   }
 

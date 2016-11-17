@@ -2448,8 +2448,7 @@ body {
   padding: 24px; }
 
 h1 {
-  font-size: 36px;
-  font-family: 'Inconsolata', monospace; }
+  font-size: 36px; }
 
 h2 {
   font-size: 28px;
@@ -2503,6 +2502,25 @@ p {
 
 button.cta {
   font-family: 'Inconsolata', monospace; }
+
+.number {
+  font-family: 'Knewave', cursive;
+  font-size: 60px;
+  letter-spacing: .1em;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .number {
+      font-size: 120px;
+      margin-bottom: 30px; } }
+  @media (min-width: 1004px) {
+    .number {
+      font-size: 150px; } }
+
+.text-large {
+  font-size: 24px; }
+  @media (min-width: 768px) {
+    .text-large {
+      font-size: 30px; } }
 
 .calendar {
   max-width: 150px; }

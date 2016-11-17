@@ -10,17 +10,17 @@
     </title>
     <meta name="description" content="Donate to nonprofits based on how much you spend on entertainment services each month.">
     <link rel="stylesheet" href="scss/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
   </head>
 
   <body>
     <div class="container mx-auto">
       <div id="service-selection">
         <div class="clearfix">
-          <div class="float-right col-3">
+          <!--<div class="float-right col-3">
             <img src="img/calendar.svg" class="calendar ">
-          </div>
+          </div>-->
           <div class="float-right col-9 pr-6">
             <h1 class="mb-3 mb-md-4">Subscribe to Change</h1>
             <p class="mb-4">
@@ -50,16 +50,13 @@
 
       <div id="results" style="display: none">
         <div class="text-center">
-          <h1 class="mb-3 mb-md-4">
-            <img src="img/calendar.svg" class="calendar-small mr-4">
-            Subscribe to Change
-          </h1>
+          <p class="mt-6 mb-3 text-large">Every month, you spend</p>
+          <span class="number" id="service-total"></span>
+          <p class="mb-6 text-large"> on entertainment.</p>
         </div>
-
-        <div class="divider my-4"></div>
-
-        <h2 class="mb-6">You spend <span class="number" id="service-total"></span> a month on entertainment.</h2>
-        <p class="mb-5">Here <span id="nonprofit-phrase"></span> your help:</p>
+        <p class="mb-5">
+          Here <span id="nonprofit-phrase"></span> your help:
+        </p>
         <div id="nonprofits-container"></div>
 
         <p class="mb-6 mt-4">

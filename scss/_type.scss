@@ -1,6 +1,5 @@
 h1 {
   font-size: 36px;
-  font-family: 'Inconsolata', monospace;
   //@include breakpoint(md) { font-size: 48px; }
   //@include breakpoint(lg) { font-size: 54px; }
 }
@@ -59,4 +58,29 @@ p {
 
 button.cta {
   font-family: 'Inconsolata', monospace;
+}
+
+span {
+
+}
+
+.number {
+  font-family: 'Knewave', cursive;
+  font-size: 60px;
+  letter-spacing: .1em;
+  margin-bottom: 20px;
+  @include breakpoint(md) {
+    font-size: 120px;
+    margin-bottom: 30px;
+  }
+  @include breakpoint(lg) {
+    font-size: 150px;
+  }
+}
+
+.text-large {
+  font-size: 24px;
+  @include breakpoint(md) {
+    font-size: 30px;
+  }
 }
