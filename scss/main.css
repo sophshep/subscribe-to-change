@@ -61,7 +61,7 @@ body {
   font-family: 'Droid Sans', sans-serif;
   font-family: 'Inconsolata', monospace;
   background: #f4eeee;
-  color: #3f3d3d;
+  color: #6a6666;
   font-size: 18px; }
 
 /* Set a 0 margin to all sides */
@@ -2475,7 +2475,8 @@ h1 {
 
 h2 {
   font-size: 28px;
-  font-family: 'Inconsolata', monospace; }
+  font-family: 'Inconsolata', monospace;
+  color: #3b3939; }
   @media (min-width: 768px) {
     h2 {
       font-size: 34px; } }
@@ -2486,6 +2487,7 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 25px;
+  color: #3b3939;
   font-family: 'Inconsolata', monospace; }
   @media (min-width: 768px) {
     h3 {
@@ -2501,8 +2503,7 @@ h5 {
   font-size: 14px; }
 
 p {
-  line-height: 1.5;
-  color: #989494; }
+  line-height: 1.5; }
 
 .lead {
   -webkit-font-smoothing: antialiased;
@@ -2525,7 +2526,8 @@ p {
   font-family: 'Knewave', cursive;
   font-size: 60px;
   letter-spacing: .1em;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #3b3939; }
   @media (min-width: 768px) {
     .number {
       font-size: 100px; } }
