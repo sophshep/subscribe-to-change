@@ -105,3 +105,17 @@ button.cta {
 .price-explanation {
   font-size: 14px;
 }
+
+.footer {
+  font-size: 14px;
+  color: #999;
+
+  a, a:link, a:visited, a:active {
+    color: #C27770;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+}

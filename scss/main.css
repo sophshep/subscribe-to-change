@@ -2632,4 +2632,13 @@ button.cta {
 .price-explanation {
   font-size: 14px; }
 
+.footer {
+  font-size: 14px;
+  color: #999; }
+  .footer a, .footer a:link, .footer a:visited, .footer a:active {
+    color: #C27770;
+    text-decoration: none; }
+  .footer a:hover, .footer a:focus {
+    text-decoration: underline; }
+
 /*# sourceMappingURL=main.css.map */
