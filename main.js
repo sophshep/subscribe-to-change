@@ -148,11 +148,16 @@
     document.getElementById('nonprofits-container').innerHTML = nonprofitsHTML
   }
 
+  function scrollToTop() {
+    window.scrollTo(0, 0)
+  }
+
   function subscribeToChange() {
     showTotalExpenses()
     showNonprofitCount()
     showAssociatedNonprofits()
     showResults()
+    scrollToTop()
   }
 
   function removeNonprofits() {
@@ -162,6 +167,7 @@
   function reset() {
     removeNonprofits()
     showForm()
+    scrollToTop()
   }
 
   function hookUpButtons() {
