@@ -2552,14 +2552,15 @@ p {
 
 .title {
   color: #f1f1f1; }
+  .title a {
+    color: inherit;
+    text-decoration: none; }
 
 .subtle {
   color: #999;
   font-size: 75%; }
 
-.nav-links li {
-  font-size: 16px; }
-.nav-links a, .nav-links a:link, .nav-links a:visited, .nav-links a:active {
+.nav-links a, .nav-links a:link, .nav-links a:visited, .nav-links a:active, .content a, .content a:link, .content a:visited, .content a:active {
   color: #C27770;
   text-decoration: none;
   -webkit-transition: color 0.1s ease-in-out;
@@ -2567,8 +2568,14 @@ p {
   -ms-transition: color 0.1s ease-in-out;
   -o-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out; }
-.nav-links a:hover, .nav-links a:focus {
+
+.nav-links li {
+  font-size: 16px; }
+.nav-links a:hover, .nav-links a:focus, .nav-links .selected a {
   color: #f5cbc6; }
+
+.content a:hover, .content a:focus {
+  color: #A65750; }
 
 .calendar {
   max-width: 150px; }
@@ -2622,6 +2629,9 @@ input[type=checkbox]:checked + img, input[type=checkbox]:checked + span {
 
 label {
   cursor: pointer; }
+
+.content p {
+  color: #666; }
 
 button.cta {
   background-color: transparent;

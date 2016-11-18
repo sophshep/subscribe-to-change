@@ -89,6 +89,11 @@ p {
 
 .title {
   color: #f1f1f1;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .subtle {
@@ -96,11 +101,7 @@ p {
   font-size: 75%;
 }
 
-.nav-links {
-  li {
-    font-size: 16px;
-  }
-
+.nav-links, .content {
   a, a:link, a:visited, a:active {
     color: #C27770;
     text-decoration: none;
@@ -110,8 +111,20 @@ p {
     -o-transition: color 0.1s ease-in-out;
     transition: color 0.1s ease-in-out;
   }
+}
 
-  a:hover, a:focus {
+.nav-links {
+  li {
+    font-size: 16px;
+  }
+
+  a:hover, a:focus, .selected a {
     color: #f5cbc6;
+  }
+}
+
+.content {
+  a:hover, a:focus {
+    color: #A65750;
   }
 }
