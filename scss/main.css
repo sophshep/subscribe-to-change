@@ -2547,6 +2547,29 @@ p {
   .btn:hover {
     background: #160d77; }
 
+.price-explanation {
+  font-size: 14px; }
+
+.title {
+  color: #f1f1f1; }
+
+.subtle {
+  color: #999;
+  font-size: 75%; }
+
+.nav-links li {
+  font-size: 16px; }
+.nav-links a, .nav-links a:link, .nav-links a:visited, .nav-links a:active {
+  color: #C27770;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out; }
+.nav-links a:hover, .nav-links a:focus {
+  color: #f5cbc6; }
+
 .calendar {
   max-width: 150px; }
 
@@ -2624,28 +2647,10 @@ button.cta {
   background: rgba(0, 0, 0, 0.8); }
 
 .subtle {
-  color: #999;
-  font-size: 75%;
   display: inline-block;
   vertical-align: top; }
 
-.price-explanation {
-  font-size: 14px; }
-
-.title {
-  color: #f1f1f1; }
-
 .nav-links li {
   display: inline-block; }
-.nav-links a, .nav-links a:link, .nav-links a:visited, .nav-links a:active {
-  color: #C27770;
-  text-decoration: none;
-  -webkit-transition: color 0.1s ease-in-out;
-  -moz-transition: color 0.1s ease-in-out;
-  -ms-transition: color 0.1s ease-in-out;
-  -o-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out; }
-.nav-links a:hover, .nav-links a:focus {
-  color: #f5cbc6; }
 
 /*# sourceMappingURL=main.css.map */
