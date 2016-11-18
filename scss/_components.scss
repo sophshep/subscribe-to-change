@@ -64,6 +64,10 @@ label {
   cursor: pointer;
 }
 
+.content p {
+  color: #666;
+}
+
 button.cta {
   background-color: transparent;
   cursor: pointer;
@@ -96,12 +100,10 @@ button.cta {
 }
 
 .subtle {
-  color: #999;
-  font-size: 75%;
   display: inline-block;
   vertical-align: top;
 }
 
-.price-explanation {
-  font-size: 14px;
+.title, .nav-links {
+  display: inline-block;
 }

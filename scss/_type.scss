@@ -13,6 +13,7 @@ h2 {
 
 h3 {
   font-size: 18px;
+  line-height: 25px;
   font-family: 'Inconsolata', monospace;
   @include breakpoint(md) { font-size: 22px; }
   @include breakpoint(lg) { font-size: 26px; }
@@ -80,5 +81,64 @@ p {
 
   &:hover {
     background: darken(#2717d3, 20%);
+  }
+}
+
+.price-explanation {
+  font-size: 14px;
+}
+
+.title {
+  color: #f1f1f1;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.subtle {
+  color: #999;
+  font-size: 75%;
+}
+
+.nav-links, .content {
+  a, a:link, a:visited, a:active {
+    color: #C27770;
+    text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
+  }
+}
+
+.nav-links {
+  font-size: 16px;
+  line-height: 36px;
+
+  a:hover, a:focus, .selected a {
+    color: #f5cbc6;
+  }
+}
+
+.content {
+  a:hover, a:focus {
+    color: #A65750;
+  }
+}
+
+@media (max-width: $width-sm) {
+  h1.title {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    line-height: 22px;
+  }
+
+  .col-9.content {
+    width: 100%;
   }
 }
