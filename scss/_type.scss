@@ -13,6 +13,7 @@ h2 {
 
 h3 {
   font-size: 18px;
+  line-height: 25px;
   font-family: 'Inconsolata', monospace;
   @include breakpoint(md) { font-size: 22px; }
   @include breakpoint(lg) { font-size: 26px; }
@@ -115,6 +116,7 @@ p {
 
 .nav-links {
   font-size: 16px;
+  line-height: 36px;
 
   a:hover, a:focus, .selected a {
     color: #f5cbc6;
@@ -124,5 +126,19 @@ p {
 .content {
   a:hover, a:focus {
     color: #A65750;
+  }
+}
+
+@media (max-width: $width-sm) {
+  h1.title {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    line-height: 22px;
+  }
+
+  .col-9.content {
+    width: 100%;
   }
 }

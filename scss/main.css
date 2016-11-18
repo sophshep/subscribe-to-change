@@ -2485,6 +2485,7 @@ h2 {
 
 h3 {
   font-size: 18px;
+  line-height: 25px;
   font-family: 'Inconsolata', monospace; }
   @media (min-width: 768px) {
     h3 {
@@ -2570,13 +2571,23 @@ p {
   transition: color 0.1s ease-in-out; }
 
 .nav-links {
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 36px; }
   .nav-links a:hover, .nav-links a:focus, .nav-links .selected a {
     color: #f5cbc6; }
 
 .content a:hover, .content a:focus {
   color: #A65750; }
 
+@media (max-width: 544px) {
+  h1.title {
+    font-size: 22px; }
+
+  .nav-links {
+    line-height: 22px; }
+
+  .col-9.content {
+    width: 100%; } }
 .calendar {
   max-width: 150px; }
 
@@ -2659,5 +2670,8 @@ button.cta {
 .subtle {
   display: inline-block;
   vertical-align: top; }
+
+.title, .nav-links {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
