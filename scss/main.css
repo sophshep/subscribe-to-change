@@ -2569,10 +2569,10 @@ p {
   -o-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out; }
 
-.nav-links li {
+.nav-links {
   font-size: 16px; }
-.nav-links a:hover, .nav-links a:focus, .nav-links .selected a {
-  color: #f5cbc6; }
+  .nav-links a:hover, .nav-links a:focus, .nav-links .selected a {
+    color: #f5cbc6; }
 
 .content a:hover, .content a:focus {
   color: #A65750; }
@@ -2659,8 +2659,5 @@ button.cta {
 .subtle {
   display: inline-block;
   vertical-align: top; }
-
-.nav-links li {
-  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
