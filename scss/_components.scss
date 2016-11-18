@@ -106,16 +106,26 @@ button.cta {
   font-size: 14px;
 }
 
-.footer {
-  font-size: 14px;
-  color: #999;
+.title {
+  color: #f1f1f1;
+}
+
+.nav-links {
+  li {
+    display: inline-block;
+  }
 
   a, a:link, a:visited, a:active {
     color: #C27770;
     text-decoration: none;
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out;
   }
 
   a:hover, a:focus {
-    text-decoration: underline;
+    color: #f5cbc6;
   }
 }

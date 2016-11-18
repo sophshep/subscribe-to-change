@@ -2632,13 +2632,20 @@ button.cta {
 .price-explanation {
   font-size: 14px; }
 
-.footer {
-  font-size: 14px;
-  color: #999; }
-  .footer a, .footer a:link, .footer a:visited, .footer a:active {
-    color: #C27770;
-    text-decoration: none; }
-  .footer a:hover, .footer a:focus {
-    text-decoration: underline; }
+.title {
+  color: #f1f1f1; }
+
+.nav-links li {
+  display: inline-block; }
+.nav-links a, .nav-links a:link, .nav-links a:visited, .nav-links a:active {
+  color: #C27770;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out; }
+.nav-links a:hover, .nav-links a:focus {
+  color: #f5cbc6; }
 
 /*# sourceMappingURL=main.css.map */
