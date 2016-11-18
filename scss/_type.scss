@@ -89,7 +89,10 @@ p {
 }
 
 .title {
-  color: #f1f1f1;
+  color: #a09c9c;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 
   a {
     color: inherit;
@@ -116,29 +119,17 @@ p {
 
 .nav-links {
   font-size: 16px;
-  line-height: 36px;
 
   a:hover, a:focus, .selected a {
     color: #f5cbc6;
   }
 }
 
-.content {
-  a:hover, a:focus {
-    color: #A65750;
-  }
+.subtle {
+  display: inline-block;
+  vertical-align: top;
 }
 
-@media (max-width: $width-sm) {
-  h1.title {
-    font-size: 22px;
-  }
-
-  .nav-links {
-    line-height: 22px;
-  }
-
-  .col-9.content {
-    width: 100%;
-  }
+.title, .nav-links {
+  display: inline-block;
 }
