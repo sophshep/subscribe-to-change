@@ -7,6 +7,7 @@ h1 {
 h2 {
   font-size: 28px;
   font-family: 'Inconsolata', monospace;
+  color: #3b3939;
   @include breakpoint(md) { font-size: 34px; }
   @include breakpoint(lg) { font-size: 38px; }
 }
@@ -14,6 +15,7 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 25px;
+  color: #3b3939;
   font-family: 'Inconsolata', monospace;
   @include breakpoint(md) { font-size: 22px; }
   @include breakpoint(lg) { font-size: 26px; }
@@ -30,7 +32,6 @@ h5 {
 
 p {
   line-height: 1.5;
-  color: #989494;
 }
 
 // Big opening paragraphs
@@ -57,6 +58,7 @@ p {
   font-size: 60px;
   letter-spacing: .1em;
   margin-bottom: 20px;
+  color: #3b3939;
   @include breakpoint(md) {
     font-size: 100px;
   }
