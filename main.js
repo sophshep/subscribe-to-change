@@ -80,7 +80,7 @@
     'police-violence': {
       name: 'Campaign Zero',
       description: 'Campaign Zero advocates for policy solutions to end police violence in America.',
-      url: 'https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=UVPa1waSv96uMA1rTlutiIIBOMjUqBSNf4OGcU5rPoApsQ-HIYsKNLbuUGC&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542'
+      url: 'http://www.joincampaignzero.org/#vision'
     },
     journalism: {
       name: 'ProPublica',

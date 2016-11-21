@@ -64,6 +64,11 @@ body {
   color: #6a6666;
   font-size: 18px; }
 
+a {
+  color: #2717d3; }
+  a:visited {
+    color: #2717d3; }
+
 /* Set a 0 margin to all sides */
 .m-0 {
   margin: 0 !important; }
