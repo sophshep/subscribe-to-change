@@ -2547,13 +2547,15 @@ p {
     .text-large {
       font-size: 30px; } }
 
-.btn {
+a.btn {
   padding: 10px 15px;
   color: #fff;
   background: #2717d3;
   text-decoration: none; }
-  .btn:hover {
+  a.btn:hover {
     background: #160d77; }
+  a.btn:visited {
+    color: #fff; }
 
 .price-explanation {
   font-size: 14px; }

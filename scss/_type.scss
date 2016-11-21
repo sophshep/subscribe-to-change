@@ -75,7 +75,7 @@ p {
   }
 }
 
-.btn {
+a.btn {
   padding: 10px 15px;
   color: #fff;
   background: #2717d3;
@@ -83,6 +83,10 @@ p {
 
   &:hover {
     background: darken(#2717d3, 20%);
+  }
+
+  &:visited {
+    color: #fff;
   }
 }
 
